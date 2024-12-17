@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS-Friendly Resume Builder tool</title>
+    <link rel="stylesheet" href="resumebuilder.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ATS-Friendly Resume Builder</h1>
+        </header>
+
+        <main>
+            <div class="resume-builder">
+
+             
+                <section id="personal-info">
+                    <h2>Personal Information</h2>
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                  
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile</label>
+                        <input type="url" id="linkedin" name="linkedin">
+                    </div>
+                </section>
+
+                <section id="work-experience">
+                    <h2>Work Experience</h2>
+                    <div id="work-entries">
+                        <div class="work-entry">
+                            <div class="form-group">
+                                <label>Job Title</label>
+                                <input type="text" class="job-title" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Company</label>
+                                <input type="text" class="company" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Duration</label>
+                                <input type="text" class="duration" placeholder="e.g., Jan 2020 - Present">
+                            </div>
+                            <div class="form-group">
+                                <label>Key Responsibilities</label>
+                                <textarea class="responsibilities" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="add-work" class="btn">+ Add Work Experience</button>
+                </section>
+
+                <section id="education">
+                    <h2>Education</h2>
+                    <div id="education-entries">
+                        <div class="education-entry">
+                            <div class="form-group">
+                                <label>Degree</label>
+                                <input type="text" class="degree" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Institution</label>
+                                <input type="text" class="institution" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Graduation Year</label>
+                                <input type="text" class="graduation-year">
+                            </div>
+                        </div>
+                    </div>
+                    <button id="add-education" class="btn">+ Add Education</button>
+                </section>
+
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <div class="form-group">
+                        <label>Add Skills (Comma Separated)</label>
+                        <input type="text" id="skills-input" placeholder="e.g., Python, JavaScript, Project Management">
+                        <div id="skills-list" class="skills-container"></div>
+
+                        
+                    </div>
+                </section>
+
+                <div class="actions">
+                    <button id="generate-resume" class="btn btn-primary">Generate Resume</button>
+                    <button id="download-resume" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                </div>
+            </div>
+
+            <div id="resume-preview" class="resume-preview">
+                <h2>Resume Preview</h2>
+                <div id="preview-content"></div>
+            </div>
+        </main>
+    </div>
+
+
+    
+
+    <script src="resumebuilder.js"></script>
+</body>
+</html>
